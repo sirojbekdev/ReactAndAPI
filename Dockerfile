@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["React/React/React.csproj", "React/"]
 RUN dotnet restore "React/React.csproj"
 COPY . .
-WORKDIR "/src/React"
+WORKDIR "/src/React/React"
 RUN dotnet build "React.csproj" -c Release -o /app/build
 
 FROM build AS publish
